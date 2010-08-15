@@ -1,0 +1,5 @@
+Example usage
+./main lyrics.txt encrypted.txt encrypt 10
+
+This means we want to encrypt the 'lyrics.txt' file into the 'encrypted.txt' file,
+shifting the characters by 10.
