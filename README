@@ -1,0 +1,4 @@
+ 1. Build
+-----------
+cd into the root directory of the project, and execute the 'make' command.
+If you want to remove the object files, execute 'make TARGET=clean' command.
