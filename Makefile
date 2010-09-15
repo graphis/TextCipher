@@ -1,13 +1,8 @@
-EXAMPLES = examples
-SRC = src
+SUBDIRS = src examples
 
-src: 
-	$(MAKE) --directory=$@ $(TARGET)
+.PHONY: all $(SUBDIRS) clean
 
-examples: $(EXAMPLES)
+all: $(SUBDIRS)
 
-$(EXAMPLES): $(SRC)
-	$(MAKE) --directory=$@ $(TARGET)
-
-.PHONY: all $(SRC) $(EXAMPLES)
-all: $(SRC) $(EXAMPLES)
+$(SUBDIRS):
+	$(MAKE) $(TARGET) -C $@

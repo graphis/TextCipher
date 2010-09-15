@@ -6,9 +6,11 @@ OBJECTS = $(SOURCES:.cpp=.o)
 CXX = g++
 CFLAGS = -c -Wall -ansi -O2
 
-%.o : %.cpp
+%.o: %.cpp
 	$(CXX) $(CFLAGS) $<
 
 all : $(OBJECTS)
-clean :
-	rm -rf *.o
+
+.PHONY: clean
+clean:
+	rm -rf $(OBJECTS)

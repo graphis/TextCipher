@@ -5,6 +5,8 @@ SOURCES = main.cpp
 EXEC = main
 CFLAGS = -Wall -ansi -O2
 
+.PHONY: all clean
+
 main.o : main.cpp
 	$(CXX) $(CFLAGS) $(SOURCES) $(OBJECTS) -o $(EXEC)
 

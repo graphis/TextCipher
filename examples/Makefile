@@ -1,11 +1,9 @@
 EXAMPLES = encrypt_file
 
-$(EXAMPLES) :
-	$(MAKE) --directory=$@ $(TARGET)
-
-.PHONY:$(EXAMPLES)
+.PHONY: all $(EXAMPLES) clean
 all : $(EXAMPLES)
 
-clean:
-	TARGET=clean
-	$(MAKE) all
+$(EXAMPLES) :
+	$(MAKE) $(TARGET) -C $@
+
+clean: $(EXAMPLES)
